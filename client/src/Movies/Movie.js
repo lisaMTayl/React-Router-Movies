@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 const Movie = (props) => {
   const [movie, setMovie] = useState();
   const id = props.match.params.id;
+  console.log(props.data);
 
   useEffect(() => {
 
@@ -23,10 +25,10 @@ const Movie = (props) => {
   },[]);
   
   // Uncomment this only when you have moved on to the stretch goals
-  // const saveMovie = () => {
-  //   const addToSavedList = props.addToSavedList;
-  //   addToSavedList(movie)
-  // }
+   // const saveMovie = () => {
+   //  const addToSavedList = props.addToSavedList;
+   //   addToSavedList(movie)
+   // };
 
   if (!movie) {
     return <div>Loading movie information...</div>;
